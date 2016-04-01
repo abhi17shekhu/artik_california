@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <title>Project Save California</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/table.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <style>
+	.parallax-container{
+	height:500px;}
+	.event{
+		color:#555;
+	}
+	.event i {
+		margin: 40px 0;
+		color: #555;
+		font-size: 7rem;
+		display: block;
+	}
+	.center {
+		text-align: center;
+		vertical-align: middle;
+	}
+	.light, footer.page-footer .footer-copyright {
+		font-weight: 300;
+	}
+	.event-caption {
+		font-size: 1.7rem;
+		font-weight: 500;
+		margin-top: 5px;
+		margin-bottom: 0;
+	}
+	h3{
+		margin: 2rem 0 1.424rem 0;
+	}
+  </style>
+    <script
+            src="http://maps.googleapis.com/maps/api/js">
+    </script>
+
+    <script>
+        var myCenter=new google.maps.LatLng(38.511558,-121.395142);
+        var mynode1=new google.maps.LatLng(38.416933, -122.658570);
+        var mynode2=new google.maps.LatLng(37.210211, -121.888255);
+        var mynode3=new google.maps.LatLng(38.556163, -122.742635);
+
+        var marker,marker1,marker2,marker3;
+
+        function initialize()
+        {
+            var mapProp = {
+                center:myCenter,
+                zoom:5,
+                mapTypeId:google.maps.MapTypeId.ROADMAP
+            };
+
+            var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+            var marker=new google.maps.Marker({
+                position:myCenter,
+                animation:google.maps.Animation.BOUNCE});
+
+                var marker1=new google.maps.Marker({
+                    position:mynode1,
+                    animation:google.maps.Animation.BOUNCE});
+
+                    var marker2=new google.maps.Marker({
+                        position:mynode2,
+                        animation:google.maps.Animation.BOUNCE});
+
+                        var marker3=new google.maps.Marker({
+                            position:mynode3,
+                            animation:google.maps.Animation.BOUNCE
+            });
+
+            marker.setMap(map);
+            marker1.setMap(map);
+            marker2.setMap(map);
+            marker3.setMap(map);
+        }
+
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+ </head>
+<body>
+  <nav class=" light-green" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="white-text brand-logo">Makers Against Drought</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a class="white-text" href="img/Dashboard_onion.jpg">Crop Suggestion</a></li>
+		<li><a class="white-text" href="img/Dashboard_mix_crops.jpg">Crop Management</a></li>
+		<li><a class="white-text" href="barter.html">Crop Barter</a></li>
+		
+		<li><a class="white grey-text text-darken-2" href="https://arpit24.typeform.com/to/oZELYf">Count me in</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a class="white-text" href="#">The Challenge</a></li>
+		<li><a class="white-text" href="#">Join Us</a></li>
+		<li><a class="white-text" href="#">Count Me in</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="white-text material-icons">menu</i></a>
+    </div>
+  </nav>
+  
+  <div id="home" class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot ">
+      <div class="container">
+        <br><br>
+        <h1 class="header white-text">Project Save California</h1>
+
+		<br><br>
+		
+      </div>
+    </div>
+    <div class="parallax"><img src="img/bg1.jpg" alt="Unsplashed background img 1"></div>
+  </div>
+
+
+  <div class="parallax-container light-green valign-wrapper" id="intro">
+      <div id="googleMap" style="width:100%;height:380px;"></div>
+  </div>
+  <div>
+      <br>
+  <h1>Transactions</h1>
+  <table class="rwd-table">
+      <tr>
+          <th>Name</th>
+          <th>Date</th>
+          <th>Barter</th>
+
+      </tr>
+      <tr>
+          <td data-th="Name">Pushp Galilio</td>
+          <td data-th="Date">31 March 2016</td>
+          <td data-th="Barter">Tomato</td>
+
+      </tr>
+      <tr>
+          <td data-th="Name">John Philips</td>
+          <td data-th="Date">2 January 2016</td>
+          <td data-th="Barter">Spring Onions</td>
+
+      </tr>
+      <tr>
+          <td data-th="Name">Roger Wills</td>
+          <td data-th="Date">21 November 2015</td>
+          <td data-th="Barter">Spinach</td>
+
+      </tr>
+      <tr>
+          <td data-th="Name">Kate Kumar</td>
+          <td data-th="Date">9 March 2015</td>
+          <td data-th="Barter">Tomato</td>
+
+      </tr>
+
+        </table>
+</div>
+
+
+	
+
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
